@@ -23,9 +23,12 @@ export function ParallaxComponent() {
       const scope = parallaxRef.current;
       if (!scope || cancelled) return;
 
-      const triggerElement = 
-      scope?.querySelector<HTMLElement>("[data-parallax-layers]");
-      if (!triggerElement) return;
+     const triggerElement = 
+     scope.querySelector<HTMLElement>("[data-parallax-layers]");
+     if (!triggerElement) return
+      
+      const triggerElement = scope?.querySelector<HTMLElement>("[data-parallax-layers]");
+      if (!triggerElement || cancelled) return;
 
       const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
         import("gsap"),
