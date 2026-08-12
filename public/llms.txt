@@ -1,0 +1,19 @@
+# Centro Medsport Temuco
+
+Centro de kinesiología, rehabilitación deportiva, entrenamiento personalizado y entrenamiento deportivo en Temuco, Chile.
+
+Ubicación: Av. Alemania 0425, local 205, Paseo Los Suizos, Temuco, La Araucanía.
+Teléfono: +56 9 3621 7808
+
+## Páginas principales
+- /kinesiologia-temuco — Kinesiología, evaluación funcional y progresión de capacidad.
+- /rehabilitacion-deportiva-temuco — Rehabilitación deportiva y retorno progresivo a la actividad.
+- /entrenamiento-personalizado-temuco — Entrenamiento personalizado, fuerza y acondicionamiento.
+- /entrenamiento-deportivo-temuco — Preparación física y entrenamiento orientado al deporte.
+- /planes — Planes de entrenamiento y continuación al pago seguro.
+
+## Acciones
+- Agenda online: AgendaPro Centro Medsport.
+- Consulta: WhatsApp de Centro Medsport.
+
+Nota: este archivo es una ayuda opcional para sistemas que decidan leerlo. El contenido HTML público y los datos estructurados del sitio son la fuente principal.
