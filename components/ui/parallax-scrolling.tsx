@@ -99,13 +99,13 @@ export function ParallaxComponent() {
         />
 
         {/* Capa oscura editorial: contraste consistente sin ocultar el espacio ni la profundidad del gimnasio. */}
-        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/20 sm:bg-black/30 lg:bg-black/40" aria-hidden="true" />
         <div
-          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,13,19,.95)_0%,rgba(5,13,19,.86)_31%,rgba(5,13,19,.60)_56%,rgba(5,13,19,.34)_78%,rgba(5,13,19,.28)_100%)] max-lg:bg-[linear-gradient(90deg,rgba(5,13,19,.94)_0%,rgba(5,13,19,.82)_55%,rgba(5,13,19,.54)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,13,19,.72)_0%,rgba(5,13,19,.58)_52%,rgba(5,13,19,.30)_100%)] sm:bg-[linear-gradient(90deg,rgba(5,13,19,.82)_0%,rgba(5,13,19,.68)_52%,rgba(5,13,19,.38)_100%)] lg:bg-[linear-gradient(90deg,rgba(5,13,19,.95)_0%,rgba(5,13,19,.86)_31%,rgba(5,13,19,.60)_56%,rgba(5,13,19,.34)_78%,rgba(5,13,19,.28)_100%)]"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_35%,transparent_0%,rgba(0,0,0,.10)_48%,rgba(0,0,0,.36)_100%)]" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-t from-med-ink/65 via-transparent to-black/25" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_35%,transparent_0%,rgba(0,0,0,.04)_52%,rgba(0,0,0,.18)_100%)] lg:bg-[radial-gradient(circle_at_76%_35%,transparent_0%,rgba(0,0,0,.10)_48%,rgba(0,0,0,.36)_100%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-med-ink/35 via-transparent to-black/10 sm:from-med-ink/45 sm:to-black/15 lg:from-med-ink/65 lg:to-black/25" aria-hidden="true" />
 
         <div className="section-shell relative z-10 flex min-h-[100svh] flex-col pb-10 pt-28 md:pb-14 md:pt-32">
           <div className="flex flex-1 items-center py-14 sm:py-16 lg:py-20">
