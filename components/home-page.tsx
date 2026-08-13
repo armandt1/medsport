@@ -7,7 +7,6 @@ import {
   Dumbbell,
   HeartPulse,
   MapPin,
-  MoveUpRight,
   Stethoscope,
   Target
 } from "lucide-react";
@@ -61,12 +60,6 @@ const services = [
   }
 ];
 
-const method = [
-  { n: "01", title: "Evaluación", text: "Primero entendemos dónde estás: capacidad, contexto, molestias, restricciones y objetivo." },
-  { n: "02", title: "Plan", text: "Convertimos la evaluación en una ruta concreta de kinesiología, entrenamiento o integración de ambos." },
-  { n: "03", title: "Evolución", text: "Observamos tu respuesta, corregimos y elevamos la exigencia cuando corresponde." }
-];
-
 export default function HomePage() {
   return (
     <main id="inicio" className="overflow-clip bg-white text-med-ink">
@@ -95,36 +88,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="metodo" className="bg-med-ink py-24 text-white md:py-32">
-        <div className="section-shell">
-          <div className="grid gap-8 border-b border-white/15 pb-10 lg:grid-cols-[1.2fr_.8fr] lg:items-end lg:gap-16">
-            <h2 className="max-w-4xl font-display text-4xl font-semibold leading-[.98] tracking-[-.05em] md:text-6xl lg:text-7xl">De la evaluación al movimiento.</h2>
-            <p className="max-w-xl text-sm leading-6 text-white/60 lg:justify-self-end lg:text-base lg:leading-7">Un proceso claro y flexible que permite integrar entrenamiento personalizado y kinesiología según lo que realmente necesitas en cada etapa.</p>
-          </div>
-
-          <div className="mt-10 grid overflow-hidden rounded-[2rem] border border-white/15 lg:grid-cols-3">
-            {method.map((item, index) => (
-              <article key={item.n} className="group relative min-h-[360px] border-white/15 p-7 transition duration-500 hover:bg-white hover:text-med-ink lg:border-r lg:last:border-r-0 md:p-9">
-                <div className="flex items-start justify-between">
-                  <span className="font-display text-6xl font-semibold text-white/15 transition group-hover:text-med-ink/10">{item.n}</span>
-                  <MoveUpRight className="h-6 w-6 text-med-aqua transition-transform duration-500 group-hover:rotate-45 group-hover:text-med-blue" />
-                </div>
-                <div className="absolute inset-x-7 bottom-8 md:inset-x-9">
-                  <h3 className="font-display text-3xl font-semibold">{item.title}</h3>
-                  <p className="mt-4 max-w-sm text-sm leading-6 text-white/55 transition group-hover:text-med-ink/60">{item.text}</p>
-                </div>
-                {index === 1 && <div className="absolute right-8 top-24 h-28 w-28 rounded-full bg-med-blue/25 blur-3xl transition group-hover:bg-med-aqua/40" />}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="servicios" className="section-shell py-24 md:py-36">
         <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <h2 className="max-w-lg font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Entrena, recupérate y vuelve a avanzar.</h2>
-            <p className="mt-6 max-w-md text-sm leading-6 text-neutral-500">Dos puertas de entrada principales —entrenamiento personalizado y kinesiología— complementadas por evaluación, rehabilitación y rendimiento deportivo.</p>
             <a className="mt-8 inline-flex items-center gap-2 rounded-full bg-med-blue px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-blue" href={site.whatsapp} target="_blank" rel="noreferrer">
               Consultar por WhatsApp <ArrowRight className="h-4 w-4" />
             </a>

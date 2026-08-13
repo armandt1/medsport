@@ -104,15 +104,10 @@ export default function ProfessionalTeam() {
   return (
     <section id="team" data-nosnippet className="bg-med-ink py-24 text-white md:py-32">
       <div className="section-shell">
-        <div className="grid gap-8 lg:grid-cols-[1fr_.65fr] lg:items-end">
-          <div>
-            <h2 className="max-w-4xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
-              Profesionales conectados por un mismo objetivo: tu evolución.
-            </h2>
-          </div>
-          <p className="max-w-xl text-sm leading-6 text-white/55 lg:justify-self-end">
-            Cada perfil puede mostrar formación, especialidades y certificaciones. Los datos actuales son campos demostrativos hasta incorporar la información oficial del equipo Medsport.
-          </p>
+        <div>
+          <h2 className="max-w-4xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
+            Profesionales conectados por un mismo objetivo: tu evolución.
+          </h2>
         </div>
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

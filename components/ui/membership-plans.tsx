@@ -9,7 +9,7 @@ export function MembershipPlans() {
           <div>
             <span className="eyebrow">PLANES MEDSPORT</span>
             <h2 className="mt-4 max-w-2xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
-              Convierte la intención en un plan concreto.
+              Nuestros planes
             </h2>
           </div>
           <div className="max-w-2xl lg:justify-self-end">
@@ -79,13 +79,6 @@ export function MembershipPlans() {
               </article>
             );
           })}
-        </div>
-
-        <div className="mt-8 flex flex-col gap-4 rounded-[1.5rem] border border-med-blue/10 bg-white p-5 sm:flex-row sm:items-center sm:justify-between md:p-6">
-          <p className="max-w-3xl text-sm leading-6 text-neutral-600">
-            <strong className="text-med-ink">¿Ya encontraste tu formato?</strong> Si la respuesta es sí, pasar a la inscripción convierte la intención en una acción concreta. Si todavía estás comparando, revísalo con calma: una decisión clara suele sostenerse mejor que una compra impulsiva.
-          </p>
-          <a href="/planes" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-med-blue">Comparar planes <ArrowRight className="h-4 w-4" /></a>
         </div>
 
         <p className="mt-5 text-xs leading-5 text-neutral-400">
