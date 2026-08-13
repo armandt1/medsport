@@ -74,12 +74,6 @@ export default function HomePage() {
       <ContinuousCta />
       <ParallaxComponent />
 
-      <section className="overflow-hidden border-y border-med-ink/10 bg-med-aqua py-4 text-med-ink" aria-label="Áreas Medsport">
-        <div className="marquee-track whitespace-nowrap font-display text-sm font-bold uppercase tracking-[.18em]">
-          <span>evaluar · kinesiología · entrenar · medir · evolucionar · rehabilitar · rendir · </span>
-          <span aria-hidden="true">evaluar · kinesiología · entrenar · medir · evolucionar · rehabilitar · rendir · </span>
-        </div>
-      </section>
 
       <section className="section-shell py-24 md:py-36" id="medsport">
         <div className="grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
@@ -103,15 +97,12 @@ export default function HomePage() {
 
       <section id="metodo" className="bg-med-ink py-24 text-white md:py-32">
         <div className="section-shell">
-          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div>
-              <span className="eyebrow text-med-aqua">EL MÉTODO</span>
-              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">De la evaluación al movimiento.</h2>
-            </div>
-            <p className="max-w-sm text-sm leading-6 text-white/55">Un proceso simple de entender y suficientemente flexible para integrar entrenamiento personalizado y kinesiología.</p>
+          <div className="grid gap-8 border-b border-white/15 pb-10 lg:grid-cols-[1.2fr_.8fr] lg:items-end lg:gap-16">
+            <h2 className="max-w-4xl font-display text-4xl font-semibold leading-[.98] tracking-[-.05em] md:text-6xl lg:text-7xl">De la evaluación al movimiento.</h2>
+            <p className="max-w-xl text-sm leading-6 text-white/60 lg:justify-self-end lg:text-base lg:leading-7">Un proceso claro y flexible que permite integrar entrenamiento personalizado y kinesiología según lo que realmente necesitas en cada etapa.</p>
           </div>
 
-          <div className="mt-14 grid overflow-hidden rounded-[2rem] border border-white/15 lg:grid-cols-3">
+          <div className="mt-10 grid overflow-hidden rounded-[2rem] border border-white/15 lg:grid-cols-3">
             {method.map((item, index) => (
               <article key={item.n} className="group relative min-h-[360px] border-white/15 p-7 transition duration-500 hover:bg-white hover:text-med-ink lg:border-r lg:last:border-r-0 md:p-9">
                 <div className="flex items-start justify-between">
@@ -132,8 +123,7 @@ export default function HomePage() {
       <section id="servicios" className="section-shell py-24 md:py-36">
         <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <span className="eyebrow">SERVICIOS EN TEMUCO</span>
-            <h2 className="mt-4 max-w-lg font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Entrena, recupérate y vuelve a avanzar.</h2>
+            <h2 className="max-w-lg font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Entrena, recupérate y vuelve a avanzar.</h2>
             <p className="mt-6 max-w-md text-sm leading-6 text-neutral-500">Dos puertas de entrada principales —entrenamiento personalizado y kinesiología— complementadas por evaluación, rehabilitación y rendimiento deportivo.</p>
             <a className="mt-8 inline-flex items-center gap-2 rounded-full bg-med-blue px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-blue" href={site.whatsapp} target="_blank" rel="noreferrer">
               Consultar por WhatsApp <ArrowRight className="h-4 w-4" />
@@ -166,8 +156,7 @@ export default function HomePage() {
         <div className="section-shell">
           <div className="grid gap-8 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
             <div>
-              <span className="eyebrow">DOS ÁREAS PRINCIPALES</span>
-              <h2 className="mt-4 max-w-xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Rehabilitar y entrenar, con continuidad.</h2>
+              <h2 className="max-w-xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Rehabilitar y entrenar, con continuidad.</h2>
             </div>
             <p className="max-w-2xl text-base leading-7 text-neutral-600 lg:justify-self-end">
               Medsport conecta la rehabilitación kinesiológica con el entrenamiento deportivo para que cada etapa tenga un objetivo claro y una progresión coherente con tu actividad.
@@ -290,8 +279,7 @@ export default function HomePage() {
           <div className="absolute bottom-[-5rem] left-[45%] h-60 w-60 rounded-full bg-med-aqua/15 blur-3xl" />
           <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <span className="eyebrow text-white">SIGUIENTE PASO</span>
-              <h2 className="mt-4 max-w-4xl font-display text-5xl font-semibold leading-[.95] tracking-[-.06em] md:text-7xl">Entrena mejor. Recupérate mejor. Avanza con dirección.</h2>
+              <h2 className="max-w-4xl font-display text-5xl font-semibold leading-[.95] tracking-[-.06em] md:text-7xl">Entrena mejor. Recupérate mejor. Avanza con dirección.</h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/75">Cuando el objetivo está claro, reducir la fricción del primer paso importa. Agenda tu evaluación o elige un plan y deja definido cómo vas a comenzar.</p>
               <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/85">
                 <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> {site.address.streetAddress} · Temuco</span>

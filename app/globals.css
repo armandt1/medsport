@@ -40,15 +40,6 @@ a { color: inherit; text-decoration: none; }
 .parallax-wrap { position: relative; background: #081521; }
 .parallax-stage { position: relative; min-height: 100svh; overflow: hidden; }
 
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 24s linear infinite;
-}
-
-.marquee-track span { padding-right: 1.5rem; }
-@keyframes marquee { to { transform: translateX(-50%); } }
-
 .service-card {
   min-height: 355px;
   border: 1px solid #dce5eb;

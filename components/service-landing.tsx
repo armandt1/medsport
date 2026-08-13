@@ -106,8 +106,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
         <div className="rounded-[2.25rem] bg-med-blue p-7 text-white md:p-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <span className="eyebrow text-white">SIGUIENTE PASO</span>
-              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Una evaluación convierte la duda en un punto de partida.</h2>
+              <h2 className="max-w-3xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Una evaluación convierte la duda en un punto de partida.</h2>
               <p className="mt-5 max-w-2xl text-sm leading-6 text-white/75">Agenda para revisar tu situación y definir qué ruta tiene más sentido antes de aumentar la exigencia.</p>
             </div>
             <a href={site.agenda} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-bold text-med-blue">

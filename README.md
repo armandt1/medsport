@@ -1,6 +1,24 @@
-# Medsport Web v1.0.10 — SEO local, IA, conversión y coberturas de kinesiología
+# Medsport Web v1.0.12 — Hero fotográfico y simplificación editorial
 
-Sitio de Centro Medsport Temuco construido con Next.js 14, React 18, TypeScript, Tailwind CSS, estructura shadcn-ready, lucide-react y parallax GSAP cargado bajo demanda.
+## Actualización v1.0.12
+
+- Hero panorámico real de Medsport desde `public/images/hero-medsport-temuco.webp`.
+- Capa oscura editorial sobre la fotografía para proteger contraste, jerarquía y legibilidad.
+- Se retiran microtextos redundantes del hero y la cinta animada inferior.
+- Se simplifican los encabezados de Método, Servicios, Áreas principales y Team.
+- La sección Método se reorganiza con una composición más editorial y mayor jerarquía visual.
+- Se eliminan iconos decorativos asociados a certificaciones para una presentación más limpia.
+- Se elimina el rótulo “Siguiente paso” en CTAs, conservando títulos y acciones.
+
+## Cambio v1.0.12 — Hero panorámico real de Medsport
+
+- Se reemplazó el hero por la panorámica de gimnasio seleccionada por el cliente.
+- La imagen se sirve localmente en WebP y conserva su composición original.
+- Se actualizó el punto focal del `object-fit` para la fotografía panorámica.
+- Se mantiene la capa gris oscura y el gradiente lateral para proteger la legibilidad del H1 y CTA.
+- Se conserva `priority`, `fetchPriority=high`, `sizes=100vw` y la animación parallax ligera del hero.
+- No se modifica el resto del diseño ni la estructura comercial de v1.0.11.
+
 
 ## Cambio v1.0.10 — FONASA, Isapres y seguros
 

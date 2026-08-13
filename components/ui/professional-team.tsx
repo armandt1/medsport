@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, BadgeCheck, BriefcaseMedical, Dumbbell, GraduationCap, X } from "lucide-react";
+import { BriefcaseMedical, Dumbbell, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 export type Professional = {
@@ -106,8 +106,7 @@ export default function ProfessionalTeam() {
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[1fr_.65fr] lg:items-end">
           <div>
-            <span className="eyebrow text-med-aqua">TEAM MEDSPORT</span>
-            <h2 className="mt-4 max-w-4xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
+            <h2 className="max-w-4xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
               Profesionales conectados por un mismo objetivo: tu evolución.
             </h2>
           </div>
@@ -134,16 +133,13 @@ export default function ProfessionalTeam() {
                 <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-med-ink/50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.14em] text-white/75 backdrop-blur">
                   Perfil demostrativo
                 </span>
-                <span className="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-med-aqua text-med-ink transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                  <BadgeCheck className="h-4 w-4" />
-                </span>
               </div>
               <div className="px-1 pb-2 pt-5">
                 <span className="text-xs font-bold uppercase tracking-[.14em] text-med-aqua">{professional.role}</span>
                 <h3 className="mt-2 font-display text-xl font-semibold">{professional.name}</h3>
                 <p className="mt-2 text-sm leading-5 text-white/50">{professional.specialty}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-white/80 transition group-hover:text-med-aqua">
-                  Ver certificaciones <Award className="h-4 w-4" />
+                <span className="mt-5 inline-flex text-xs font-bold text-white/80 transition group-hover:text-med-aqua">
+                  Ver certificaciones
                 </span>
               </div>
             </button>
@@ -192,14 +188,10 @@ export default function ProfessionalTeam() {
             </div>
 
             <div className="mt-8">
-              <div className="flex items-center gap-2">
-                <GraduationCap className="h-5 w-5 text-med-blue" />
-                <h4 className="font-display text-xl font-semibold">Formación y certificaciones</h4>
-              </div>
+              <h4 className="font-display text-xl font-semibold">Formación y certificaciones</h4>
               <div className="mt-4 grid gap-3">
                 {selected.certifications.map((certification) => (
-                  <div key={certification} className="flex gap-3 rounded-2xl border border-neutral-200 p-4 text-sm leading-6 text-neutral-600">
-                    <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-med-blue" />
+                  <div key={certification} className="rounded-2xl border border-neutral-200 p-4 text-sm leading-6 text-neutral-600">
                     <span>{certification}</span>
                   </div>
                 ))}

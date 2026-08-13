@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from "react";
 import { ArrowDownRight, ClipboardCheck, HeartPulse } from "lucide-react";
 import { site } from "@/lib/site";
 
-
 export function ParallaxComponent() {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
@@ -23,8 +22,7 @@ export function ParallaxComponent() {
       const scope = parallaxRef.current;
       if (!scope || cancelled) return;
 
-      const triggerElement = 
-      scope?.querySelector<HTMLElement>("[data-parallax-layers]");
+      const triggerElement = scope.querySelector<HTMLElement>("[data-parallax-layers]");
       if (!triggerElement) return;
 
       const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
@@ -35,45 +33,39 @@ export function ParallaxComponent() {
 
       gsap.registerPlugin(ScrollTrigger);
       const ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: triggerElement,
-            start: "top top",
-            end: "bottom top",
-            scrub: 0.8
-          }
-        });
-
-        [
-          { layer: "1", yPercent: 18 },
-          { layer: "2", yPercent: 34 },
-          { layer: "3", yPercent: 10 },
-          { layer: "4", yPercent: 46 }
-        ].forEach(({ layer, yPercent }, index) => {
-          tl.to(
-            triggerElement.querySelectorAll(`[data-parallax-layer="${layer}"]`),
-            { yPercent, ease: "none" },
-            index === 0 ? undefined : "<"
-          );
-        });
-
         const heroImage = triggerElement.querySelector<HTMLElement>("[data-hero-image]");
+
         if (heroImage) {
           gsap.fromTo(
             heroImage,
-            { scale: 1.085, yPercent: -1.5 },
+            { scale: 1.055, yPercent: -1.5 },
             {
-              scale: 1.025,
-              yPercent: 3.5,
+              scale: 1.015,
+              yPercent: 3.2,
               ease: "none",
               scrollTrigger: {
                 trigger: triggerElement,
                 start: "top top",
                 end: "bottom top",
-                scrub: 1.15
+                scrub: 1.1
               }
             }
           );
+        }
+
+        const heroCopy = triggerElement.querySelector<HTMLElement>("[data-hero-copy]");
+        if (heroCopy) {
+          gsap.to(heroCopy, {
+            yPercent: 8,
+            opacity: 0.86,
+            ease: "none",
+            scrollTrigger: {
+              trigger: triggerElement,
+              start: "top top",
+              end: "bottom top",
+              scrub: 1.25
+            }
+          });
         }
       }, scope);
 
@@ -94,77 +86,79 @@ export function ParallaxComponent() {
   return (
     <div ref={parallaxRef} className="parallax-wrap">
       <section className="parallax-stage" data-parallax-layers aria-labelledby="medsport-hero-title">
-        <div className="absolute inset-0 bg-med-ink" />
-        <div data-parallax-layer="2" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(47,107,255,.24),transparent_28%),radial-gradient(circle_at_56%_72%,rgba(53,212,230,.12),transparent_25%)]" />
-        <div className="absolute inset-0 opacity-[.055] [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)] [background-size:72px_72px]" />
+        {/* Hero photography: local, production-optimized asset. */}
+        <Image
+          src="/images/hero-medsport-temuco.webp"
+          alt="Interior del gimnasio Medsport en Temuco con equipamiento de entrenamiento y personas realizando actividad física"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          data-hero-image
+          className="object-cover object-center will-change-transform"
+        />
 
-        <div data-parallax-layer="4" className="absolute -left-28 top-[30%] h-72 w-72 rounded-full border border-med-aqua/20" />
-        <div data-parallax-layer="4" className="absolute left-[35%] top-[62%] h-40 w-40 rounded-full bg-med-blue/25 blur-3xl" />
+        {/* Capa oscura editorial: contraste consistente sin ocultar el espacio ni la profundidad del gimnasio. */}
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,13,19,.95)_0%,rgba(5,13,19,.86)_31%,rgba(5,13,19,.60)_56%,rgba(5,13,19,.34)_78%,rgba(5,13,19,.28)_100%)] max-lg:bg-[linear-gradient(90deg,rgba(5,13,19,.94)_0%,rgba(5,13,19,.82)_55%,rgba(5,13,19,.54)_100%)]"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_35%,transparent_0%,rgba(0,0,0,.10)_48%,rgba(0,0,0,.36)_100%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-med-ink/65 via-transparent to-black/25" aria-hidden="true" />
 
-        <div data-parallax-layer="3" className="section-shell relative z-10 flex min-h-[100svh] flex-col pb-10 pt-28 md:pb-14 md:pt-32">
-          <div className="flex items-center justify-between border-b border-white/15 pb-5 text-[11px] font-semibold uppercase tracking-[.18em] text-white/60 sm:text-xs">
-            <span>Temuco · Chile</span>
-            <span className="hidden sm:inline">Kinesiología + Entrenamiento deportivo</span>
-          </div>
-
-          <div className="grid flex-1 items-center gap-8 py-8 lg:grid-cols-[1.04fr_.96fr] lg:gap-12 lg:py-10">
-            <div className="order-2 lg:order-1">
-              <p className="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] text-med-aqua sm:text-sm">
-                <span className="h-2 w-2 rounded-full bg-med-aqua" /> Movimiento con propósito
-              </p>
-              <h1 id="medsport-hero-title" className="max-w-4xl font-display text-[clamp(2.8rem,6vw,6.4rem)] font-semibold leading-[.9] tracking-[-.065em] text-white">
+        <div className="section-shell relative z-10 flex min-h-[100svh] flex-col pb-10 pt-28 md:pb-14 md:pt-32">
+          <div className="flex flex-1 items-center py-14 sm:py-16 lg:py-20">
+            <div data-hero-copy className="max-w-[760px] lg:max-w-[820px]">
+              <h1
+                id="medsport-hero-title"
+                className="max-w-4xl font-display text-[clamp(2.8rem,6vw,6.4rem)] font-semibold leading-[.9] tracking-[-.065em] text-white [text-wrap:balance]"
+              >
                 TU OBJETIVO MERECE
                 <br />
                 <span className="text-med-aqua">MÁS QUE UNA RUTINA.</span>
               </h1>
+
               <p className="mt-7 max-w-3xl font-display text-lg font-semibold leading-snug tracking-[-.02em] text-white sm:text-xl md:text-2xl">
                 Merece evaluación. Estrategia. Seguimiento.
               </p>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/60 md:text-base md:leading-7">
+
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 md:text-base md:leading-7">
                 Kinesiología, rehabilitación deportiva y entrenamiento personalizado en Temuco para transformar un objetivo en un proceso medible y acompañado.
               </p>
+
               <div className="mt-7 flex flex-col gap-2 sm:flex-row">
-                <a href={site.agenda} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-med-blue px-5 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-blue">
+                <a
+                  href={site.agenda}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-med-blue px-5 py-3.5 text-sm font-bold text-white shadow-[0_14px_45px_rgba(47,107,255,.22)] transition hover:-translate-y-0.5 hover:shadow-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-med-aqua"
+                >
                   <HeartPulse className="h-4 w-4" /> Agendar Kinesiología
                 </a>
-                <a href="/#planes" className="inline-flex items-center justify-center gap-2 rounded-full bg-med-aqua px-5 py-3.5 text-sm font-bold text-med-ink transition hover:-translate-y-0.5">
+                <a
+                  href="/#planes"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3.5 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:border-med-aqua/40 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-med-aqua"
+                >
                   <ClipboardCheck className="h-4 w-4" /> Ver planes de entrenamiento
                 </a>
               </div>
-            </div>
 
-            <div data-parallax-layer="1" className="order-1 lg:order-2 lg:justify-self-end">
-              <div className="group relative mx-auto aspect-[4/5] w-full max-w-[640px] overflow-hidden rounded-[1.8rem] border border-white/15 bg-white/5 shadow-[0_36px_120px_rgba(0,0,0,.34)] sm:aspect-[16/10] lg:aspect-[4/5] lg:max-h-[72svh]">
-                <Image
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=88"
-                  alt="Entrenamiento deportivo y preparación física en un gimnasio"
-                  fill
-                  priority
-                  sizes="(max-width: 1023px) calc(100vw - 2rem), 46vw"
-                  data-hero-image
-                  className="object-cover object-center will-change-transform transition-[filter] duration-700 group-hover:brightness-[1.04]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-med-ink/80 via-transparent to-med-ink/10" />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-6">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-[.18em] text-med-aqua">Medsport · Temuco</span>
-                    <p className="mt-1 max-w-sm font-display text-xl font-semibold leading-tight text-white sm:text-2xl">Entrena con una estrategia construida para ti.</p>
-                  </div>
-                  <span className="hidden h-11 w-11 shrink-0 place-items-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur sm:grid">
-                    <ArrowDownRight className="h-5 w-5" />
-                  </span>
-                </div>
-                <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-med-ink/35 px-3 py-2 text-[10px] font-bold uppercase tracking-[.14em] text-white backdrop-blur-md">
-                  Evaluar · Planificar · Avanzar
-                </div>
+              <div className="mt-8 hidden items-center gap-3 text-[10px] font-bold uppercase tracking-[.16em] text-white/45 sm:flex">
+                <span className="h-px w-8 bg-white/25" /> Evaluar · Planificar · Avanzar
               </div>
             </div>
           </div>
 
           <div className="flex items-center justify-between border-t border-white/15 pt-5 text-[11px] font-semibold uppercase tracking-[.16em] text-white/45 sm:text-xs">
             <span>Av. Alemania · Temuco</span>
-            <a href="#metodo" aria-label="Ir al método Medsport" className="group inline-flex items-center gap-2 text-white/70 transition hover:text-med-aqua">
-              Conocer el método <ArrowDownRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
+            <a
+              href="#metodo"
+              aria-label="Ir al método Medsport"
+              className="group inline-flex items-center gap-2 text-white/70 transition hover:text-med-aqua"
+            >
+              Conocer el método
+              <ArrowDownRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
             </a>
           </div>
         </div>
