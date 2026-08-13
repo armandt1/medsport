@@ -52,13 +52,15 @@ export default function FaqSections() {
       <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
         <div className="relative min-h-[440px] overflow-hidden rounded-[2rem] bg-med-ink">
           <Image
-            className="object-cover opacity-80"
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1400&q=82"
-            alt="Entrenamiento guiado en gimnasio en un centro deportivo"
+            className="object-cover object-[center_42%] opacity-95"
+            src="/images/antes-de-empezar-medsport.webp"
+            alt="Deportista entrenando levantamiento con barra en Centro Medsport"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-med-ink via-med-ink/15 to-transparent" />
+          <div className="absolute inset-0 bg-black/32" />
+          <div className="absolute inset-0 bg-gradient-to-t from-med-ink/95 via-med-ink/40 to-med-ink/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-med-ink/20 via-transparent to-med-ink/15" />
           <div className="absolute inset-x-0 bottom-0 p-7 md:p-10">
             <span className="eyebrow text-med-aqua">ANTES DE EMPEZAR</span>
             <h2 className="mt-3 max-w-md font-display text-3xl font-semibold tracking-tight text-white md:text-5xl">
