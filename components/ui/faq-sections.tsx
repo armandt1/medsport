@@ -52,18 +52,19 @@ export default function FaqSections() {
       <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
         <div className="relative min-h-[440px] overflow-hidden rounded-[2rem] bg-med-ink">
           <Image
-            className="object-cover object-[center_42%] opacity-95"
+            className="object-cover object-[center_40%] scale-[1.03] grayscale saturate-0 contrast-125 brightness-[0.72]"
             src="/images/antes-de-empezar-medsport.webp"
             alt="Deportista entrenando levantamiento con barra en Centro Medsport"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
           />
-          <div className="absolute inset-0 bg-black/32" />
-          <div className="absolute inset-0 bg-gradient-to-t from-med-ink/95 via-med-ink/40 to-med-ink/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-med-ink/20 via-transparent to-med-ink/15" />
-          <div className="absolute inset-x-0 bottom-0 p-7 md:p-10">
-            <span className="eyebrow text-med-aqua">ANTES DE EMPEZAR</span>
-            <h2 className="mt-3 max-w-md font-display text-3xl font-semibold tracking-tight text-white md:text-5xl">
+          <div className="absolute inset-0 bg-black/[0.28]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/10 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/30 to-transparent" />
+          <div className="absolute inset-x-0 bottom-8 p-7 md:bottom-12 md:p-10">
+            <span className="eyebrow text-med-aqua drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)]">ANTES DE EMPEZAR</span>
+            <h2 className="mt-3 max-w-md font-display text-3xl font-semibold tracking-tight text-white drop-shadow-[0_3px_22px_rgba(0,0,0,0.72)] md:text-5xl">
               Entrena y recupérate con una ruta clara.
             </h2>
           </div>
