@@ -70,51 +70,46 @@ export default function HomePage() {
 
       <section className="section-shell py-24 md:py-36" id="medsport">
         <div className="grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
-          <div>
+          <div className="lg:sticky lg:top-28 lg:self-start">
             <span className="eyebrow">MEDSPORT / TEMUCO</span>
-            <p className="mt-6 max-w-sm text-sm leading-6 text-neutral-500">
-              Entrenamiento personalizado y kinesiología en Temuco dentro de una misma lógica: evaluar, planificar, progresar y medir.
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-.05em] md:text-6xl lg:text-7xl">
+            <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.02] tracking-[-.05em] md:text-6xl lg:text-7xl">
               No se trata solo de moverte. Se trata de <span className="inline rounded-lg bg-med-sky px-2 text-med-blue">moverte mejor.</span>
             </h2>
-            <div className="mt-12 grid gap-8 border-t border-neutral-200 pt-8 md:grid-cols-2">
-              <p className="text-base leading-7 text-neutral-600">Cada proceso parte por entender tu situación actual. Desde ahí, el trabajo puede orientarse al rendimiento, al entrenamiento personalizado, a la recuperación o a una transición entre estas etapas.</p>
-              <p className="text-base leading-7 text-neutral-600">La propuesta une criterio clínico y deportivo en una experiencia clara, medible y progresiva, evitando soluciones genéricas.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicios" className="section-shell py-24 md:py-36">
-        <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="max-w-lg font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Entrena, recupérate y vuelve a avanzar.</h2>
+            <p className="mt-7 max-w-lg text-base leading-7 text-neutral-600">
+              Cada proceso parte por entender tu situación actual. Desde ahí, el trabajo puede orientarse al rendimiento, al entrenamiento personalizado, a la recuperación o a una transición entre estas etapas.
+            </p>
             <a className="mt-8 inline-flex items-center gap-2 rounded-full bg-med-blue px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-blue" href={site.whatsapp} target="_blank" rel="noreferrer">
               Consultar por WhatsApp <ArrowRight className="h-4 w-4" />
             </a>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-2">
-            {services.map(({ icon: Icon, title, text, href }, i) => (
-              <article key={title} className={`service-card group ${i % 2 === 1 ? "md:translate-y-12" : ""}`}>
-                <div className="flex items-center justify-between">
-                  <span className="grid h-12 w-12 place-items-center rounded-full bg-med-sky text-med-blue transition duration-300 group-hover:bg-med-blue group-hover:text-white"><Icon className="h-5 w-5" /></span>
-                  <span className="text-xs font-bold text-neutral-400">{String(i + 1).padStart(2, "0")}</span>
-                </div>
-                <div className="mt-20">
-                  <h3 className="font-display text-2xl font-semibold">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-neutral-500">{text}</p>
-                  {href && (
-                    <a href={href} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-med-blue transition hover:gap-3" aria-label={`Ver información sobre ${title} en Temuco`}>
-                      Ver servicio <ArrowRight className="h-4 w-4" />
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
+          <div id="servicios" className="scroll-mt-28">
+            <div className="border-t border-neutral-200 pt-8">
+              <h3 className="max-w-2xl font-display text-3xl font-semibold tracking-[-.04em] md:text-5xl">Entrena, recupérate y vuelve a avanzar.</h3>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600">
+                La propuesta une criterio clínico y deportivo en una experiencia clara, medible y progresiva, conectando evaluación, recuperación y entrenamiento sin soluciones genéricas.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-3 md:grid-cols-2">
+              {services.map(({ icon: Icon, title, text, href }, i) => (
+                <article key={title} className={`service-card group ${i % 2 === 1 ? "md:translate-y-12" : ""}`}>
+                  <div className="flex items-center justify-between">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-med-sky text-med-blue transition duration-300 group-hover:bg-med-blue group-hover:text-white"><Icon className="h-5 w-5" /></span>
+                    <span className="text-xs font-bold text-neutral-400">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <div className="mt-20">
+                    <h3 className="font-display text-2xl font-semibold">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-neutral-500">{text}</p>
+                    {href && (
+                      <a href={href} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-med-blue transition hover:gap-3" aria-label={`Ver información sobre ${title} en Temuco`}>
+                        Ver servicio <ArrowRight className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
