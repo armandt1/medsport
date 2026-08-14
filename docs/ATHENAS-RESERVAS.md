@@ -1,8 +1,19 @@
-# Medsport → ATHENAS | Reservas web
+# Medsport → ATHENAS | Reservas de evaluación
+
+## Alcance
+
+La ruta pública `/reservas` de Medsport se utiliza exclusivamente para reservar la **evaluación inicial Medsport**.
+No permite reservar entrenamientos, sesiones kinésicas ni otras prestaciones desde el selector público.
+
+Servicio fijo enviado por el servidor:
+
+```text
+evaluacion-inicial
+```
+
+El navegador no decide el tipo de servicio y nunca recibe el token de ATHENAS.
 
 ## Arquitectura
-
-El navegador nunca recibe el token de ATHENAS.
 
 Medsport `/reservas`
 → `/api/athenas/availability`
@@ -14,45 +25,63 @@ Medsport `/reservas`
 
 ## Requisito de ATHENAS
 
-ATHENAS debe exponer un gateway público limitado al centro Medsport que reutilice la lógica real de `booking_lib.php` y confirme una reserva únicamente después de bloquear el horario de forma transaccional.
-
-Contrato esperado:
+ATHENAS debe mapear `evaluacion-inicial` a la prestación/agenda de evaluación correspondiente al centro Medsport y reutilizar la lógica real de reservas para validar cupos, conflictos y bloqueo transaccional del horario.
 
 ### POST availability
-Entrada mínima:
+Entrada enviada por Medsport:
+
 ```json
-{"service":"kinesiologia","date":"2026-08-20"}
+{"service":"evaluacion-inicial","date":"2026-08-20"}
 ```
-Respuesta:
+
+Respuesta esperada:
+
 ```json
 {"slots":[{"id":"slot-firmado","time":"10:30","professional":"Profesional","remaining":1}]}
 ```
 
 ### POST bookings
-Entrada mínima:
+Entrada enviada por Medsport:
+
 ```json
-{"service":"kinesiologia","date":"2026-08-20","slot":"slot-firmado","name":"Nombre","email":"correo@example.com","phone":"+569...","consent":true,"source":"medsport-web"}
+{
+  "service":"evaluacion-inicial",
+  "date":"2026-08-20",
+  "slot":"slot-firmado",
+  "name":"Nombre",
+  "email":"correo@example.com",
+  "phone":"+569...",
+  "objective":"iniciar-entrenamiento",
+  "consent":true,
+  "source":"medsport-web-evaluation"
+}
 ```
+
 Respuesta de éxito:
+
 ```json
 {"confirmed":true,"reference":"ABC123","startsAt":"2026-08-20 10:30","professional":"Profesional"}
 ```
 
 ## Seguridad
-- HTTPS.
-- Token solo servidor-servidor.
+
+- HTTPS obligatorio.
+- Token únicamente servidor-servidor.
 - Rate limiting en ATHENAS.
-- Origen/canal Medsport autorizado.
+- Canal `website-evaluation` autorizado para Medsport.
+- El servicio se fija en servidor como `evaluacion-inicial`; no se confía en un servicio enviado por el navegador.
 - No aceptar `organization_id` desde el navegador.
 - No exponer datos de otros deportistas.
-- Solo datos de contacto mínimos; no solicitar información clínica detallada en el formulario público.
-- La UI solo muestra “Hora confirmada” si ATHENAS responde `confirmed: true`.
+- Solicitar solo contacto y objetivo general; no solicitar antecedentes clínicos detallados en el formulario público.
+- La interfaz solo muestra “Evaluación confirmada” si ATHENAS responde `confirmed: true`.
 
 ## Despliegue Netlify
+
 Añadir en Site configuration → Environment variables:
+
 - `ATHENAS_PUBLIC_AVAILABILITY_URL`
 - `ATHENAS_PUBLIC_BOOKING_URL`
 - `ATHENAS_BOOKING_TOKEN`
 - `NEXT_PUBLIC_ATHENAS_BOOKING_URL`
 
-Después redeploy.
+Después realizar un redeploy.

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { BookingClient } from "@/components/reservas/booking-client";
 
 export const metadata: Metadata = {
-  title: "Reservas | Medsport Temuco",
+  title: "Reservar evaluación | Medsport Temuco",
   description:
-    "Reserva tu evaluación, sesión kinésica o entrenamiento en Medsport Temuco con disponibilidad conectada a ATHENAS.",
+    "Reserva tu evaluación inicial en Medsport Temuco. Consulta disponibilidad real y confirma tu horario conectado con ATHENAS.",
   robots: { index: true, follow: true },
 };
 
@@ -16,13 +16,14 @@ export default function ReservasPage() {
         <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
           <div className="max-w-3xl">
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-lime-400">
-              Reserva Medsport
+              Evaluación Medsport
             </span>
             <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              Elige una hora real. Nosotros nos encargamos del proceso.
+              Tu entrenamiento comienza entendiendo cómo estás hoy.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-              Consulta disponibilidad, selecciona tu horario y confirma. La agenda se conecta con ATHENAS para respetar cupos, conflictos y reglas del centro.
+              Reserva tu evaluación inicial. El equipo Medsport analiza cualidades físicas y habilidades para identificar
+              hallazgos relevantes y definir una planificación personalizada antes de avanzar al entrenamiento.
             </p>
           </div>
         </div>
