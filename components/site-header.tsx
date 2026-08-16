@@ -58,7 +58,7 @@ export function SiteHeader() {
               <a key={href} className="rounded-xl px-3 py-3 text-lg" href={href} onClick={() => setOpen(false)}>{label}</a>
             ))}
             <div className="mt-4 border-t border-white/10 pt-4">
-              <p className="px-3 pb-2 text-[10px] font-bold uppercase tracking-[.16em] text-white/35">Acciones rápidas</p>
+              
               <a className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition hover:bg-white/5" href="https://agendapro.com/mp/cl/pl/centro-medsport/233580" target="_blank" rel="noreferrer"><HeartPulse className="h-4 w-4 text-med-aqua" /> Agendar Kinesiología</a>
               <a className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition hover:bg-white/5" href="https://wa.me/56936217808?text=Hola%20Medsport%2C%20quiero%20registrarme%20para%20una%20evaluaci%C3%B3n%20en%20el%20gimnasio." target="_blank" rel="noreferrer"><ClipboardCheck className="h-4 w-4 text-med-aqua" /> Evaluación gimnasio</a>
             </div>

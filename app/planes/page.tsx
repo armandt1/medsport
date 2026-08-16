@@ -52,7 +52,7 @@ export default function PlansPage() {
       <section className="bg-med-ink pb-16 pt-36 text-white md:pb-24 md:pt-44">
         <div className="section-shell grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <div>
-            <span className="eyebrow text-med-aqua">PLANES · MEDSPORT TEMUCO</span>
+            
             <h1 className="mt-5 max-w-5xl font-display text-5xl font-semibold leading-[.95] tracking-[-.06em] md:text-7xl">
               Entrenamiento planificado desde tu evaluación.
             </h1>
@@ -70,7 +70,7 @@ export default function PlansPage() {
       <section className="bg-med-blue py-12 text-white md:py-16">
         <div className="section-shell grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <span className="eyebrow text-med-aqua">DISPONIBILIDAD</span>
+            
             <h2 className="mt-3 max-w-4xl font-display text-3xl font-semibold tracking-[-.04em] md:text-5xl">
               Confirma tu horario antes de inscribirte.
             </h2>

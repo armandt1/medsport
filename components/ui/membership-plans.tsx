@@ -6,7 +6,7 @@ export function MembershipPlans() {
     <section id="planes" className="bg-med-ice py-20 md:py-28">
       <div className="section-shell">
         <div className="max-w-4xl">
-          <span className="eyebrow">PLANES MEDSPORT</span>
+          
           <h2 className="mt-4 font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">
             Nuestros planes
           </h2>
@@ -25,12 +25,7 @@ export function MembershipPlans() {
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
-                    <span className={`rounded-full px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.12em] ${featured ? "bg-med-aqua text-med-ink" : "bg-white text-med-blue ring-1 ring-med-blue/10"}`}>
-                      {plan.badge}
-                    </span>
                   </div>
-
-                  <p className={`mt-8 text-[11px] font-bold uppercase tracking-[.14em] ${featured ? "text-med-aqua" : "text-med-blue"}`}>{plan.category}</p>
                   <h3 className="mt-2 font-display text-2xl font-semibold tracking-[-.04em]">{plan.name}</h3>
                   <p className={`mt-4 min-h-[96px] text-sm leading-6 ${featured ? "text-white/65" : "text-neutral-500"}`}>{plan.description}</p>
 
@@ -83,7 +78,7 @@ export function MembershipPlans() {
         <div className="mt-8 rounded-[2rem] bg-white p-6 ring-1 ring-med-ink/5 md:p-8">
           <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:items-start">
             <div>
-              <span className="eyebrow">UN MISMO SISTEMA PARA TODOS LOS PLANES</span>
+              
               <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">
                 Primero evaluamos. Después preparamos. Luego entrenamos.
               </h3>

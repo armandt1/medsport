@@ -36,7 +36,7 @@ export function ContinuousCta() {
         <div className="w-[min(90vw,310px)] rounded-[1.35rem] border border-med-ink/10 bg-white/95 p-2 shadow-[0_18px_60px_rgba(8,21,33,.16)] backdrop-blur-xl">
           <div className="flex items-center justify-between px-3 pb-2 pt-2">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[.16em] text-med-blue">Medsport</p>
+              
               <p className="mt-0.5 text-xs font-semibold text-med-ink">¿Qué quieres hacer?</p>
             </div>
             <button

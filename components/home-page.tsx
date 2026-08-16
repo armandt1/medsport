@@ -67,11 +67,10 @@ export default function HomePage() {
       <ContinuousCta />
       <ParallaxComponent />
 
-
       <section className="section-shell py-24 md:py-36" id="medsport">
         <div className="grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <span className="eyebrow">MEDSPORT / TEMUCO</span>
+            
             <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.02] tracking-[-.05em] md:text-6xl lg:text-7xl">
               No se trata solo de moverte. Se trata de <span className="inline rounded-lg bg-med-sky px-2 text-med-blue">moverte mejor.</span>
             </h2>
@@ -129,10 +128,10 @@ export default function HomePage() {
             <article className="specialty-card group bg-white">
               <div className="flex items-start justify-between gap-6">
                 <span className="grid h-14 w-14 place-items-center rounded-2xl bg-med-sky text-med-blue"><HeartPulse className="h-6 w-6" /></span>
-                <span className="text-xs font-bold uppercase tracking-[.15em] text-neutral-400">REHAB / 01</span>
+                
               </div>
               <div className="mt-14">
-                <span className="text-xs font-bold uppercase tracking-[.14em] text-med-blue">Rehabilitación kinesiológica</span>
+                
                 <h3 className="mt-3 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">Recuperar capacidad para volver a moverte con confianza.</h3>
                 <p className="mt-5 max-w-xl text-sm leading-6 text-neutral-600">
                   El proceso parte con una evaluación funcional y avanza mediante objetivos progresivos. Se trabaja sobre movilidad, fuerza, control, tolerancia a la carga y tareas vinculadas a tu vida diaria o práctica deportiva.
@@ -154,10 +153,10 @@ export default function HomePage() {
             <article className="specialty-card group bg-med-ink text-white">
               <div className="flex items-start justify-between gap-6">
                 <span className="grid h-14 w-14 place-items-center rounded-2xl bg-med-aqua text-med-ink"><Dumbbell className="h-6 w-6" /></span>
-                <span className="text-xs font-bold uppercase tracking-[.15em] text-white/35">SPORT / 02</span>
+                
               </div>
               <div className="mt-14">
-                <span className="text-xs font-bold uppercase tracking-[.14em] text-med-aqua">Entrenamiento deportivo</span>
+                
                 <h3 className="mt-3 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">Entrenar capacidades que tengan sentido para tu deporte.</h3>
                 <p className="mt-5 max-w-xl text-sm leading-6 text-white/60">
                   La planificación se construye desde tu nivel, calendario y objetivo. El foco puede integrar fuerza, potencia, resistencia, movilidad, técnica de ejercicios y control de carga para sostener una evolución medible.
@@ -215,7 +214,7 @@ export default function HomePage() {
       <section className="section-shell py-20 md:py-28" id="temuco">
         <div className="grid gap-10 rounded-[2.25rem] border border-med-ink/10 bg-white p-7 md:p-10 lg:grid-cols-[.85fr_1.15fr] lg:p-14">
           <div>
-            <span className="eyebrow">MEDSPORT EN TEMUCO</span>
+            
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-.05em] md:text-5xl">Kinesiología y entrenamiento en Av. Alemania.</h2>
           </div>
           <div className="space-y-5 text-base leading-7 text-neutral-600">

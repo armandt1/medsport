@@ -49,7 +49,7 @@ export default function PaymentPage({ searchParams }: { searchParams?: { plan?: 
 
       <section className="payment-shell py-10 md:py-16 lg:py-20">
         <div className="mb-8 max-w-3xl">
-          <span className="eyebrow">TU PLAN</span>
+          
           <h1 className="mt-4 font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Confirma disponibilidad antes de comenzar.</h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-600">
             Los planes Medsport funcionan con cupos y horarios definidos. Antes del pago confirmamos contigo que exista disponibilidad para la modalidad seleccionada.
@@ -58,7 +58,6 @@ export default function PaymentPage({ searchParams }: { searchParams?: { plan?: 
 
         <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
           <aside className="rounded-[2rem] bg-med-ink p-6 text-white md:p-8">
-            <p className="text-[11px] font-bold uppercase tracking-[.16em] text-med-aqua">Plan seleccionado</p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-[-.04em]">{plan.name}</h2>
             <p className="mt-2 text-sm text-white/55">{plan.category}</p>
 

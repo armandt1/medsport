@@ -19,7 +19,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
           </nav>
           <div className="grid gap-10 lg:grid-cols-[1.18fr_.82fr] lg:items-end">
             <div>
-              <span className="eyebrow text-med-aqua">{service.eyebrow}</span>
+              
               <h1 className="mt-5 max-w-5xl font-display text-5xl font-semibold leading-[.95] tracking-[-.06em] md:text-7xl">{service.title}</h1>
             </div>
             <div>
@@ -41,7 +41,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
       <section className="section-shell py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-2">
           <article className="rounded-[2rem] bg-med-ice p-7 md:p-10">
-            <span className="eyebrow">¿PARA QUIÉN PUEDE SER?</span>
+            
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">Un punto de partida según tu situación actual.</h2>
             <div className="mt-8 space-y-4">
               {service.whoFor.map((item) => (
@@ -54,7 +54,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
           </article>
 
           <article className="rounded-[2rem] border border-med-ink/10 p-7 md:p-10">
-            <span className="eyebrow">QUÉ PUEDE INCLUIR</span>
+            
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">Trabajo progresivo y medible.</h2>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {service.includes.map((item) => (
@@ -67,7 +67,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
 
       <section className="bg-med-ice py-20 md:py-28">
         <div className="section-shell">
-          <span className="eyebrow">CÓMO SE ORGANIZA</span>
+          
           <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold tracking-[-.05em] md:text-6xl">Un proceso fácil de entender.</h2>
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {service.process.map((step, index) => (
@@ -84,7 +84,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
       <section className="section-shell py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr]">
           <div>
-            <span className="eyebrow">RESPUESTAS DIRECTAS</span>
+            
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-.04em] md:text-5xl">Preguntas frecuentes.</h2>
             <div className="mt-8 flex items-start gap-3 text-sm leading-6 text-neutral-600">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-med-blue" />

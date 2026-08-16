@@ -125,12 +125,10 @@ export default function ProfessionalTeam() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="font-display text-6xl font-semibold tracking-[-.08em] text-white/90">{professional.initials}</span>
                 </div>
-                <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-med-ink/50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.14em] text-white/75 backdrop-blur">
-                  Perfil demostrativo
-                </span>
+                
               </div>
               <div className="px-1 pb-2 pt-5">
-                <span className="text-xs font-bold uppercase tracking-[.14em] text-med-aqua">{professional.role}</span>
+                
                 <h3 className="mt-2 font-display text-xl font-semibold">{professional.name}</h3>
                 <p className="mt-2 text-sm leading-5 text-white/50">{professional.specialty}</p>
                 <span className="mt-5 inline-flex text-xs font-bold text-white/80 transition group-hover:text-med-aqua">
@@ -162,7 +160,7 @@ export default function ProfessionalTeam() {
                   {selected.initials}
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-[.14em] text-med-blue">{selected.role}</span>
+                  
                   <h3 id="professional-modal-title" className="mt-1 font-display text-2xl font-semibold sm:text-3xl">{selected.name}</h3>
                   <p className="mt-1 text-sm text-neutral-500">{selected.specialty}</p>
                 </div>

@@ -15,9 +15,7 @@ export default function ReservasPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_16%,rgba(132,204,22,0.16),transparent_30%),linear-gradient(180deg,#0d100d_0%,#080a08_100%)]" />
         <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
           <div className="max-w-3xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-lime-400">
-              Evaluación Medsport
-            </span>
+            
             <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               Tu entrenamiento comienza entendiendo cómo estás hoy.
             </h1>

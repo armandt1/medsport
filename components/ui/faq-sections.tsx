@@ -63,7 +63,7 @@ export default function FaqSections() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/10 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/30 to-transparent" />
           <div className="absolute inset-x-0 bottom-8 p-7 md:bottom-12 md:p-10">
-            <span className="eyebrow text-med-aqua drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)]">ANTES DE EMPEZAR</span>
+            
             <h2 className="mt-3 max-w-md font-display text-3xl font-semibold tracking-tight text-white drop-shadow-[0_3px_22px_rgba(0,0,0,0.72)] md:text-5xl">
               Entrena y recupérate con una ruta clara.
             </h2>
@@ -71,7 +71,7 @@ export default function FaqSections() {
         </div>
 
         <div className="self-center">
-          <span className="eyebrow">PREGUNTAS FRECUENTES</span>
+          
           <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-5xl">Lo importante, sin vueltas.</h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-500">
             Respuestas rápidas para entender los servicios y dar el primer paso en Medsport.

@@ -108,9 +108,7 @@ export function BookingClient() {
   return (
     <section className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[0.82fr_1.18fr] lg:px-10 lg:py-16">
       <aside className="rounded-3xl border border-white/10 bg-white/[0.035] p-6 lg:p-8">
-        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-lime-400">
-          Tu primera etapa
-        </span>
+        
         <h2 className="mt-4 text-2xl font-semibold">Todo comienza con una evaluación.</h2>
         <p className="mt-4 text-sm leading-6 text-white/60">
           Antes de entrenar, el equipo Medsport evalúa cualidades físicas y habilidades para detectar déficits de fuerza,
@@ -147,7 +145,7 @@ export function BookingClient() {
 
       <div className="rounded-3xl border border-white/10 bg-[#0d100d] p-6 shadow-2xl shadow-black/20 lg:p-8">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">Evaluación inicial Medsport</span>
+          
           <h2 className="mt-2 text-2xl font-semibold">Reserva tu evaluación</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-white/55">
             Selecciona una fecha para consultar los horarios disponibles del equipo.
@@ -235,7 +233,7 @@ export function BookingClient() {
         ) : selected ? (
           <form onSubmit={submitBooking} className="mt-8 border-t border-white/10 pt-7">
             <div className="mb-5">
-              <span className="text-xs uppercase tracking-[0.2em] text-white/45">Evaluación seleccionada</span>
+              
               <strong className="mt-1 block text-xl">
                 {date} · {selected.time}
               </strong>
