@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarDays, ClipboardCheck, HeartPulse, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const nav = [
@@ -18,9 +19,20 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-5">
       <div className="mx-auto flex max-w-[1480px] items-center justify-between rounded-full border border-white/15 bg-med-ink/80 px-4 py-3 text-white shadow-xl backdrop-blur-xl md:px-6">
-        <a href="/" className="flex items-center gap-3" aria-label="Medsport inicio">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-med-aqua text-sm font-black text-med-ink">M</span>
-          <span className="font-display text-base font-bold tracking-[-.04em]">MEDSPORT</span>
+        <a
+          href="/"
+          className="flex shrink-0 items-center"
+          aria-label="Medsport inicio"
+        >
+          <Image
+            src="/images/logo-medsport-white.png"
+            alt="Medsport Rehabilitación y Entrenamiento"
+            width={2172}
+            height={724}
+            priority
+            sizes="(max-width: 768px) 145px, 190px"
+            className="h-auto w-[145px] object-contain md:w-[190px]"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-white/70 lg:flex">
