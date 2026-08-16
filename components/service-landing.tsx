@@ -12,7 +12,7 @@ export function ServiceLanding({ service }: { service: ServiceLandingData }) {
 
       <section className="bg-med-ink pb-20 pt-36 text-white md:pb-28 md:pt-44">
         <div className="section-shell">
-          <nav aria-label="Breadcrumb" className="mb-12 text-xs font-semibold text-white/45">
+          <nav aria-label="Breadcrumb" className="mb-12 text-xs font-semibold text-white/60">
             <a className="transition hover:text-white" href="/">Inicio</a>
             <span className="mx-2">/</span>
             <span>{service.shortName}</span>

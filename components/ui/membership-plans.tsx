@@ -31,13 +31,13 @@ export function MembershipPlans() {
 
                   <div className={`mt-7 border-t pt-6 ${featured ? "border-white/15" : "border-med-ink/10"}`}>
                     {plan.oldPrice && (
-                      <p className={`mb-1 text-xs ${featured ? "text-white/45" : "text-neutral-400"}`}>
+                      <p className={`mb-1 text-xs ${featured ? "text-white/60" : "text-neutral-600"}`}>
                         Antes <span className="line-through">{plan.oldPrice}</span>
                       </p>
                     )}
                     <div className="flex items-end gap-2">
                       <strong className="font-display text-4xl font-semibold tracking-[-.06em]">{plan.price}</strong>
-                      {plan.suffix && <span className={`pb-1 text-xs font-bold ${featured ? "text-white/45" : "text-neutral-400"}`}>{plan.suffix}</span>}
+                      {plan.suffix && <span className={`pb-1 text-xs font-bold ${featured ? "text-white/60" : "text-neutral-600"}`}>{plan.suffix}</span>}
                     </div>
                   </div>
 
@@ -109,7 +109,7 @@ export function MembershipPlans() {
           </p>
         </div>
 
-        <p className="mt-5 text-xs leading-5 text-neutral-400">
+        <p className="mt-5 text-xs leading-5 text-neutral-600">
           Valores mensuales informados por Medsport. Todos los planes están sujetos a disponibilidad de cupos y horarios. Las condiciones finales se confirman antes de iniciar.
         </p>
       </div>

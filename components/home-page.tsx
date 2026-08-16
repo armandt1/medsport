@@ -95,7 +95,7 @@ export default function HomePage() {
                 <article key={title} className={`service-card group ${i % 2 === 1 ? "md:translate-y-12" : ""}`}>
                   <div className="flex items-center justify-between">
                     <span className="grid h-12 w-12 place-items-center rounded-full bg-med-sky text-med-blue transition duration-300 group-hover:bg-med-blue group-hover:text-white"><Icon className="h-5 w-5" /></span>
-                    <span className="text-xs font-bold text-neutral-400">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-neutral-600">{String(i + 1).padStart(2, "0")}</span>
                   </div>
                   <div className="mt-20">
                     <h3 className="font-display text-2xl font-semibold">{title}</h3>
@@ -158,7 +158,7 @@ export default function HomePage() {
               <div className="mt-14">
                 
                 <h3 className="mt-3 font-display text-3xl font-semibold tracking-[-.04em] md:text-4xl">Entrenar capacidades que tengan sentido para tu deporte.</h3>
-                <p className="mt-5 max-w-xl text-sm leading-6 text-white/60">
+                <p className="mt-5 max-w-xl text-sm leading-6 text-white/95">
                   La planificación se construye desde tu nivel, calendario y objetivo. El foco puede integrar fuerza, potencia, resistencia, movilidad, técnica de ejercicios y control de carga para sostener una evolución medible.
                 </p>
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -241,8 +241,8 @@ export default function HomePage() {
           <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <h2 className="max-w-4xl font-display text-5xl font-semibold leading-[.95] tracking-[-.06em] md:text-7xl">Entrena mejor. Recupérate mejor. Avanza con dirección.</h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75">Cuando el objetivo está claro, reducir la fricción del primer paso importa. Agenda tu evaluación o elige un plan y deja definido cómo vas a comenzar.</p>
-              <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/85">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/95">Cuando el objetivo está claro, reducir la fricción del primer paso importa. Agenda tu evaluación o elige un plan y deja definido cómo vas a comenzar.</p>
+              <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/95">
                 <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> {site.address.streetAddress} · Temuco</span>
                 <span>{site.phoneDisplay}</span>
               </div>

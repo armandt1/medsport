@@ -18,7 +18,7 @@ const config: Config = {
         med: {
           ink: "#081521",
           navy: "#0D2233",
-          blue: "#2F6BFF",
+          blue: "#2B63F2",
           aqua: "#35D4E6",
           sky: "#DDEEFF",
           ice: "#EEF7FA",

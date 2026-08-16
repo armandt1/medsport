@@ -212,7 +212,7 @@ export function BookingClient() {
         )}
 
         {!loading && slots.length === 0 && !error && (
-          <p className="mt-5 text-sm text-white/45">Selecciona una fecha y consulta la disponibilidad.</p>
+          <p className="mt-5 text-sm text-white/60">Selecciona una fecha y consulta la disponibilidad.</p>
         )}
 
         {error && (
@@ -228,7 +228,7 @@ export function BookingClient() {
               {success.startsAt || selected?.startsAt || `${date} · ${selected?.time || ""}`}
             </p>
             {success.professional && <p className="mt-1 text-sm text-white/60">{success.professional}</p>}
-            {success.reference && <p className="mt-3 text-xs text-white/45">Código: {success.reference}</p>}
+            {success.reference && <p className="mt-3 text-xs text-white/60">Código: {success.reference}</p>}
           </div>
         ) : selected ? (
           <form onSubmit={submitBooking} className="mt-8 border-t border-white/10 pt-7">
